@@ -1,6 +1,22 @@
-public class TrianguloEquilatero {
+public class TrianguloEquilatero extends FiguraGeometrica{
+
+    double lado;
+
+    public TrianguloEquilatero(String cor, double lado){
+        super(cor);
+        this.lado = lado;
+    }
+
+    public double getLado(){
+        return lado;
+    }
+
+    public void setLado(double lado){
+        this.lado = lado;
+    }
+
     public String getTipoFigura(){
-        return "Triângulo";
+        return "Triângulo Equilátero";
     }
 
     public double calcularPerimetro(double lado){
@@ -18,4 +34,13 @@ public class TrianguloEquilatero {
  
         return area;
     }
+
+    public void getDetalhes(){
+        System.out.println("Lado: "+lado);
+    }
+
+    public void getInfo(){
+        getDetalhes();
+    }
+
 }
