@@ -25,11 +25,13 @@ public class Retangulo extends FiguraGeometrica{
         this.altura = altura;
     }
 
+    @Override
     public String getTipoFigura(){
         return "Retângulo";
     }
 
-    public double calcularPerimetro(double largura, double altura){
+    @Override
+    public double calcularPerimetro(){
         double perimetro;
 
         perimetro = (largura+altura)*2;
@@ -37,7 +39,8 @@ public class Retangulo extends FiguraGeometrica{
         return perimetro;
     }
 
-    public double calcularArea(double largura, double altura){
+    @Override
+    public double calcularArea(){
         double area;
         
         area = largura*altura;
@@ -45,9 +48,7 @@ public class Retangulo extends FiguraGeometrica{
         return area;
     }
 
-    public void getDetalhes(){
-        getInfo();
-        System.out.println("Largura: "+largura);
-        System.out.println("Altura: "+altura);
+    public String getDetalhes(){
+        return "Largura: " + largura + ", Altura: "+ altura;
     }
 }
