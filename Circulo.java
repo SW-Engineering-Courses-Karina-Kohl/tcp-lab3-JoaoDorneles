@@ -15,28 +15,31 @@ public class Circulo extends FiguraGeometrica{
         this.raio = raio;
     }
 
+    @Override
     public String getTipoFigura(){
         return "Círculo";
     }
 
-    public double calcularPerimetro(double raio){
+    @Override
+    public double calcularPerimetro(){
         double perimetro;
 
-        perimetro = 2*Math.PI*raio;
+        perimetro = 2*Math.PI*getRaio();
 
         return perimetro;
     }
 
-    public double calcularArea(double raio){
+    @Override
+    public double calcularArea(){
         double area;
         
-        area = Math.PI*(Math.pow(raio,2));
+        area = Math.PI*(Math.pow(getRaio(),2));
 
         return area;
     }
 
-    public void getDetalhes(){
-        getInfo();
-        System.out.println("Raio: "+raio);
+    public String getDetalhes(){
+        return "Raio: "+ raio;
     }
+
 }
