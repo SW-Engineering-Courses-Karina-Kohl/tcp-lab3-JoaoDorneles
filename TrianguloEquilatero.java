@@ -15,11 +15,13 @@ public class TrianguloEquilatero extends FiguraGeometrica{
         this.lado = lado;
     }
 
+    @Override
     public String getTipoFigura(){
         return "Triângulo Equilátero";
     }
 
-    public double calcularPerimetro(double lado){
+    @Override
+    public double calcularPerimetro(){
         double perimetro;
         
         perimetro = lado*3;
@@ -27,7 +29,8 @@ public class TrianguloEquilatero extends FiguraGeometrica{
         return perimetro;
     }
 
-    public double calcularArea(double lado){
+    @Override
+    public double calcularArea(){
         double area;
 
         area = (((Math.pow(lado,2))*(Math.sqrt(3))))/4;
@@ -35,12 +38,8 @@ public class TrianguloEquilatero extends FiguraGeometrica{
         return area;
     }
 
-    public void getDetalhes(){
-        System.out.println("Lado: "+lado);
-    }
-
-    public void getInfo(){
-        getDetalhes();
+    public String getDetalhes(){
+        return "Lados: " + lado;
     }
 
 }
